@@ -1,34 +1,183 @@
+#SONGS HAVE BEEN FILLED DO NOT TOUCH ANYTHING
+
+
+####################################################
+#               SONG RECOMMENDATIONS               #
+####################################################
+
+
 import sqlite3
-import urllib.request
-import re
 
-db = sqlite3.connect('songs.db')
-c = db.cursor()
-c.execute('''
-        CREATE TABLE IF NOT EXISTS songs(
-            songname text,
-            played int,
-            genre text,
-            popular text,
-            artist text
-            )
-        ''')
-db.commit()
-Song1 = ('beliver,,'',,'')
-Song2 = ()
-Song3 = ()
-Song4 = ()
-Song5 = ()
-Song6 = ()
-Song7 = ()
-Song8 = ()
-Song9 = ()
-Song10 = ()
-Song11 = ()
-Song12 = ()
-Song13 = ()
-Song14 = ()
-Song15 = ()
+#############################################################
+class Database():
+    def __init__(self):
+        return
 
+    def Create(self):
+        db = sqlite3.connect('main.db')
+        c = db.cursor()
+        try:
+            c.execute('''CREATE TABLE main(
+                              song_name text,
+                              artist text,
+                              genre text,
+                              popular text,
+                              times_played int
+                              )
+                              ''')
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Believer',
+                                    'artist':'Imagine Dragons',
+                                    'genre':'pop rock',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Dynamite',
+                                    'artist':'BTS',
+                                    'genre':'korean pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Butter',
+                                    'artist':'BTS',
+                                    'genre':'korean pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Thunder',
+                                    'artist':'Imagine Dragons',
+                                    'genre':'pop rock',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Senorita',
+                                    'artist':'Shawn Mendes',
+                                    'genre':'Pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Stitches',
+                                    'artist':'Shawn Mendes',
+                                    'genre':'Pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Savage Love',
+                                    'artist':'Jason Derulo',
+                                    'genre':'Pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Waiting for love',
+                                    'artist':'Avicii',
+                                    'genre':'Progressive House',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Wake me up',
+                                    'artist':'Avicii',
+                                    'genre':'Progressive House',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Let me down slowly',
+                                    'artist':'Alec Benjamin',
+                                    'genre':'Pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Bad at love',
+                                    'artist':'Halsey',
+                                    'genre':'Pop',
+                                    'popular':'false',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Without Me',
+                                    'artist':'Halsey',
+                                    'genre':'Pop',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'Animals',
+                                    'artist':'Martin Garrix',
+                                    'genre':'Progressive House',
+                                    'popular':'true',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'jealousy,jealousy',
+                                    'artist':'Olivia Rodrigo',
+                                    'genre':'pop rock',
+                                    'popular':'false',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+            c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                                {
+                                    'song':'In the name of love',
+                                    'artist':'Martin Garrix',
+                                    'genre':'Progressive House',
+                                    'popular':'false',
+                                    'times_played':0
+                                }
+                              )
+            db.commit()
+        except:
+            return 'Table Exists'
 
-
+result = Database().Create()
+#############################################################
