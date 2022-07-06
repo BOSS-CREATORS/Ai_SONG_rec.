@@ -98,7 +98,7 @@ class Database():
             db.commit()
             c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
                                 {
-                                    'song':'Waiting for love',
+                                    'song':'Waiting for Love',
                                     'artist':'Avicii',
                                     'genre':'Progressive House',
                                     'popular':'true',
@@ -181,3 +181,7 @@ class Database():
 
 result = Database().Create()
 #############################################################
+
+search = input()
+search = search.lower()
+db = sqlite3.connect('main.db')
