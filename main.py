@@ -1,6 +1,4 @@
 import sqlite3
-import youtube_dl
-import pytube
 import urllib.request
 import re
 
