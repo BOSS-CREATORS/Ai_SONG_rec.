@@ -14,7 +14,7 @@ c.execute('''
             )
         ''')
 db.commit()
-Song1 = ('',,'',,'')
+Song1 = ('beliver,,'',,'')
 Song2 = ()
 Song3 = ()
 Song4 = ()
