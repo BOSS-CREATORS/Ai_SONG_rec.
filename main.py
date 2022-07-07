@@ -182,6 +182,43 @@ class Database():
 result = Database().Create()
 #############################################################
 
-search = input()
-search = search.lower()
-db = sqlite3.connect('main.db')
+class UserInformation():
+    def __init__(self):
+        return
+
+    def Create(self):
+        try:
+            db = sqlite3.connect('userInformation.db')
+            c = db.cursor()
+            c.execute('''CREATE TABLE info(
+                    favourite_song text,
+                    favourite_artist text,
+                    artist_played int,
+                    song_played int
+                    '''
+                    )
+
+            db.commit()
+            return 'Created file'
+        except:
+            return 'File path already exists'
+
+Var = UserInformation().Create()
+print(Var)
+
+class AI():
+    def __init__(self):
+        return
+    def Run(self):
+        while True:
+            a = input('Enter a song:')
+            a = a.lower()
+            db = sqlite3.connect('userInformation.db')
+            
+
+
+
+
+
+
+
