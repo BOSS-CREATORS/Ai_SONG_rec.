@@ -182,5 +182,27 @@ class Database():
                               }
                             )
           db.commit()
+            
+            
+          c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                              {
+                                  'song':'Night Changes',
+                                  'artist':'One Direction',
+                                  'genre':'Pop Rock',
+                                  'popular':'True,
+                                  'times_played':0
+                              }
+                            )
+          db.commit()
+          c.execute("INSERT INTO main VALUES(:song,:artist,:genre,:popular,:times_played)",
+                              {
+                                  'song':'Living life. In the night',
+                                  'artist':'Sierra kid',
+                                  'genre':'pop',
+                                  'popular':'false',
+                                  'times_played':0
+                              }
+                            )
+          db.commit()
         except:
           return False
